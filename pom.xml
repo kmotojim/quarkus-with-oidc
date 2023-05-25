@@ -6,19 +6,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.acme</groupId>
-    <artifactId>security-openid-connect-multi-tenancy-quickstart</artifactId>
+    <artifactId>security-openid-connect-quickstart</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <properties>
         <quarkus.platform.artifact-id>quarkus-bom</quarkus.platform.artifact-id>
         <quarkus.platform.group-id>io.quarkus</quarkus.platform.group-id>
         <quarkus.platform.version>2.16.6.Final</quarkus.platform.version>
-        <keycloak.image.version>19.0.1-legacy</keycloak.image.version>
         <surefire.version>3.0.0-M7</surefire.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <htmlunit.version>2.36.0</htmlunit.version>
     </properties>
 
     <dependencyManagement>
@@ -42,7 +40,6 @@
             <groupId>io.quarkus</groupId>
             <artifactId>quarkus-resteasy-reactive-jackson</artifactId>
         </dependency>
-
         <!-- Test dependencies -->
         <dependency>
             <groupId>io.quarkus</groupId>
@@ -50,31 +47,15 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>io.quarkus</groupId>
-            <artifactId>quarkus-test-keycloak-server</artifactId>
-        </dependency>
-        <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>rest-assured</artifactId>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>net.sourceforge.htmlunit</groupId>
-            <artifactId>htmlunit</artifactId>
-            <version>${htmlunit.version}</version>
+        <!-- <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-test-keycloak-server</artifactId>
             <scope>test</scope>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.httpcomponents</groupId>
-                    <artifactId>httpmime</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>commons-logging</groupId>
-                    <artifactId>commons-logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        
+        </dependency> -->
     </dependencies>
 
     <build>
@@ -86,6 +67,7 @@
                 <directory>config</directory>
             </resource>
         </resources>
+
         <plugins>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -94,7 +76,6 @@
                     <systemPropertyVariables>
                         <java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
                         <maven.home>${maven.home}</maven.home>
-                        <keycloak.image.version>${keycloak.image.version}</keycloak.image.version>
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
@@ -144,7 +125,7 @@
                                             org.jboss.logmanager.LogManager
                                         </java.util.logging.manager>
                                         <maven.home>${maven.home}</maven.home>
-                                        <keycloak.image.version>${keycloak.image.version}</keycloak.image.version>
+                                        <keycloak.version>${keycloak.version}</keycloak.version>
                                     </systemPropertyVariables>
                                 </configuration>
                             </execution>

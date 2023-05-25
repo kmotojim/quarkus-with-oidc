@@ -1,0 +1,3 @@
+2023-05-25 12:00:26,327 kmotojim-mac security-openid-connect-quickstart-dev.jar[15033] INFO  [io.quarkus] (Quarkus Main Thread) security-openid-connect-quickstart 1.0.0-SNAPSHOT on JVM (powered by Quarkus 2.16.6.Final) started in 1.473s. Listening on: http://localhost:8080
+2023-05-25 12:00:26,335 kmotojim-mac security-openid-connect-quickstart-dev.jar[15033] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-05-25 12:00:26,337 kmotojim-mac security-openid-connect-quickstart-dev.jar[15033] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [cdi, oidc, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, vertx]
