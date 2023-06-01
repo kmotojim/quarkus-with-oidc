@@ -39,3 +39,7 @@ nb-configuration.xml
 
 #quakurs
 *.log
+
+#unused
+*.bk
+*.unused
