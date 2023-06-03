@@ -50,7 +50,6 @@ public class WebResource {
     public TemplateInstance getPrivatePage(@QueryParam("myname") final String myName) {
 
         log.info("This is private-page");
-        
         log.info("myName: {}",myName);
         
         return privatePage
