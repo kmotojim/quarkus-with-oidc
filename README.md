@@ -11,6 +11,7 @@ git checkout scenario1
 ```
 ## hello-page(Githubにログインせずにアクセス可能)
 http://localhost:8080/web/hello-page?myname=kmotojim
+
 http://localhost:8080/web/private-page?myname=新宿一郎
 
 ## ログイン機能有効化
@@ -75,6 +76,7 @@ SECRET=<Secret>
 
 ## hello-page(Githubのログインが必要)
 http://localhost:8080/web/hello-page?myname=kmotojim
+
 http://localhost:8080/web/private-page?myname=新宿一郎
 
 # シナリオ<2>
