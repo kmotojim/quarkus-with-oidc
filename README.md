@@ -12,6 +12,7 @@ git checkout scenario1
 ## hello-page(Githubにログインせずにアクセス可能)
 http://localhost:8080/web/hello-page?myname=kmotojim
 
+## private-page(Githubにログインせずにアクセス可能)
 http://localhost:8080/web/private-page?myname=新宿一郎
 
 ## ログイン機能有効化
@@ -78,6 +79,7 @@ SECRET=<Secret>
 ## hello-page(Githubのログインが必要)
 http://localhost:8080/web/hello-page?myname=kmotojim
 
+## private-page(Githubのログインが必要)
 http://localhost:8080/web/private-page?myname=新宿一郎
 
 # シナリオ<2>
@@ -86,6 +88,12 @@ http://localhost:8080/web/private-page?myname=新宿一郎
 ```
 git checkout scenario2
 ```
+
+## protected-page(Githubのログインが必要)
+http://localhost:8080/web/protected-page
+
+## not-protected-page(Githubのログインが必要)
+http://localhost:8080/web/not-protected-page
 
 ### application.properties編集
 OIDCに関する設定の追加
