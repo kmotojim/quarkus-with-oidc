@@ -6,7 +6,7 @@ git checkout scenario1
 ```
 ## DEVELOPMENT機能で起動
 ```
-# -Dオプションで変数をアプリケーションに受渡し
+# quarkusを開発モードで機能
 ./mvnw clean package quarkus:dev
 ```
 ## hello-page(Githubにログインせずにアクセス可能)
@@ -70,7 +70,7 @@ SECRET=<Secret>
 
 ## DEVELOPMENT機能で起動
 ```
-# -Dオプションで変数をアプリケーションに受渡し
+# quarkusを開発モードで機能 & -Dオプションで変数をアプリケーションに受渡し
 ./mvnw clean package quarkus:dev -Dquarkus.oidc.client-id=$CLIENTID -Dquarkus.oidc.credentials.secret=$SECRET
 ```
 
@@ -97,7 +97,7 @@ quarkus.http.auth.permission.permitted.policy=permit
 
 ## DEVELOPMENT機能で起動
 ```
-# -Dオプションで変数をアプリケーションに受渡し
+# # quarkusを開発モードで機能 & -Dオプションで変数をアプリケーションに受渡し
 ./mvnw clean package quarkus:dev -Dquarkus.oidc.client-id=$CLIENTID -Dquarkus.oidc.credentials.secret=$SECRET
 ```
 
