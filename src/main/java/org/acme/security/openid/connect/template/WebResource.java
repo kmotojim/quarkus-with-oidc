@@ -24,10 +24,13 @@ public class WebResource {
     Template hello;
 
     @Inject
-    Template showToken;
+    Template privatePage;
 
     @Inject
-    Template notProtected;
+    Template protectedPage;
+
+    @Inject
+    Template notProtectedPage;
 
 
     @GET
@@ -43,13 +46,26 @@ public class WebResource {
     }
 
     @GET
+    @Path("/private-page")
+    public TemplateInstance getPrivatePage(@QueryParam("myname") final String myName) {
+
+        log.info("This is private-page");
+        
+        log.info("myName: {}",myName);
+        
+        return privatePage
+                .data("myName", myName)
+                ;   
+    }
+
+    @GET
     @Path("/protected-page")
     public TemplateInstance getProtectedPage() {
 
         log.info("This is protected-page");
         log.info("idToken: {}",idToken);
         
-        return showToken
+        return protectedPage
                 .data("pageType", "Protected")
                 .data("idToken", idToken)
                 ;  
@@ -61,7 +77,7 @@ public class WebResource {
 
         log.info("This is not-protected-page");
         
-        return notProtected
+        return notProtectedPage
                 .data("pageType", "NotProtected")
                 ;  
     }
