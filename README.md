@@ -21,6 +21,7 @@ http://localhost:8080/web/private-page?myname=新宿一郎
 - GitHub App name: <任意の名前>
 - Homepage URL: http://localhost:8080
 - Callback URL: http://localhost:8080/callback
+- Webhook: Disable(Uncheck Active)
 
 GitHub App作成後、Secretを生成する。また、GitHub AppのClient IDとSecretを控えておく。
 
